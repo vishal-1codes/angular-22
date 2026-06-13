@@ -1,0 +1,12 @@
+<p>home works!</p>
+@if(productList().length  === 0){
+    <p>Product Not Added!</p>
+}
+@else{
+    @for(product of productList();track product.Index){
+    <div>
+        {{product.Index}} - {{product.name}}
+    </div>
+}
+}
+<button (click)="addProducts()">Add Product</button>
