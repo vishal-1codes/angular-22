@@ -1,1 +1,35 @@
 <p>contact works!</p>
+
+<form >
+    <div>
+        <label>Name</label>
+        <input
+        type="text"
+        [value]="contactForm().name"
+        (input)="updateFields('name',$event)">
+        @if(errors().name){
+            <small>{{ errors().name }}</small>
+        }
+    </div>
+       <div>
+        <label>Email</label>
+        <input
+        type="email"
+        [value]="contactForm().email"
+        (input)="updateFields('email',$event)">
+        @if(errors().email){
+            <small>{{ errors().email }}</small>
+        }
+    </div>
+       <div>
+        <label>Mobile</label>
+        <input
+        type="number"
+        [value]="contactForm().mobile"
+        (input)="updateFields('mobile',$event)">
+          @if(errors().mobile){
+            <small>{{ errors().mobile }}</small>
+        }
+    </div>
+    <button type="button" (click)="formSubmit()">Submit</button>
+</form>
