@@ -1,5 +1,6 @@
 import { Component,effect,signal } from '@angular/core';
 import { Common } from '../../core/services/common';
+import { About } from '../about/about';
 @Component({
   selector: 'app-home',
   imports: [],
