@@ -1,6 +1,7 @@
-import { Component,effect,signal } from '@angular/core';
+import { Component,effect,PLATFORM_ID,signal,inject } from '@angular/core';
 import { Common } from '../../core/services/common';
 import { About } from '../about/about';
+import { isPlatformBrowser } from '@angular/common';
 @Component({
   selector: 'app-home',
   imports: [],
@@ -10,15 +11,26 @@ import { About } from '../about/about';
 export class Home {
   productList=signal<any[]>([])
   count=signal(1)
+
+  private patformId=inject(PLATFORM_ID)
+
   constructor(public common:Common){
+
     effect(()=>{
       this.productList.set(this.common.productList())
       console.log("get product list",this.productList());
       console.log("adsdsa",this.productList().length);
-      
+    
+      if(isPlatformBrowser(this.patformId)){
+        localStorage.setItem('token','vishalpawar')
+      }
+
     })
+
+   
     
   }
+  
 
   addProducts(){
     

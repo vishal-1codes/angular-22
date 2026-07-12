@@ -1,13 +1,14 @@
 import { Component, linkedSignal, resource } from '@angular/core';
 import { signal,computed,effect,input,model} from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Global } from '../../core/services/global';
 @Component({
   selector: 'app-about',
   imports: [FormsModule],
   templateUrl: './about.html',
   styleUrl: './about.scss',
 })
-export class About {
+export class About{
    name = input<string>();
   newName=model('')
 
@@ -42,11 +43,14 @@ export class About {
     }
   })
 
-  constructor(){
-
+  constructor(private global:Global){
+    console.log("constuasdsa");
+    
     effect(()=>{
       console.log('couter change',this.count(),this.newName())
     })
+
+    this.getUserCall()
   }
 
   ngOnInit(){
@@ -75,6 +79,19 @@ export class About {
     ])
 
     console.log("this.countArray",this.countArray())
+
+   
+  }
+
+
+  getUserCall(){
+   console.log('Calling API...');
+   this.global.getUser().subscribe((res:any)=>{
+      console.log("res",res);
+      
+    })
+    console.log("get UserList",);
+    
   }
 
 }
