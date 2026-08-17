@@ -1,0 +1,68 @@
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo i {
+  margin-right: 8px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-btn {
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: white;
+  color: #212529;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  background: #f1f1f1;
+}
+
+.icon-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+
+  background: red;
+  color: white;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  font-size: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+
+  .header-actions {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+}

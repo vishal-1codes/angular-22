@@ -1,4 +1,4 @@
-<p>home works!</p>
+<!-- <p>home works!</p>
 @if(productList().length  === 0){
     <p>Product Not Added!</p>
 }
@@ -9,4 +9,189 @@
     </div>
 }
 }
-<button (click)="addProducts()">Add Product</button>
+<button (click)="addProducts()">Add Product</button> -->
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- Left -->
+      <div class="col-lg-6">
+
+        <span class="badge bg-primary mb-3">
+          New Arrival
+        </span>
+
+        <h1>
+          Experience the
+          <span>Next Generation</span>
+          of Smartphones
+        </h1>
+
+        <p>
+          Discover the latest Samsung smartphones
+          with powerful performance, amazing cameras
+          and stunning displays.
+        </p>
+
+        <button class="btn btn-dark btn-lg">
+          Shop Now
+          <i class="bi bi-arrow-right"></i>
+        </button>
+
+      </div>
+
+      <!-- Right -->
+      <div class="col-lg-6 text-center">
+
+        <div class="hero-phone">
+
+          <img
+            src="https://images.unsplash.com/photo-1709744722656-9b850470293f?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Samsung Galaxy">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section
+  class="products-section"
+  id="products">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span>Our Products</span>
+
+      <h2>
+        Latest Smartphones
+      </h2>
+
+      <p>
+        Choose the smartphone that suits you.
+      </p>
+
+    </div>
+
+
+    <!-- Product Slider -->
+
+    <div class="product-slider">
+
+      @for (product of smartPhoneList(); track product.name) {
+
+        <div class="product-card">
+
+          <div class="product-image">
+
+            <img
+              [src]="product.image"
+              [alt]="product.name">
+
+          </div>
+
+          <div class="product-content">
+
+            <h5>
+              {{ product.name }}
+            </h5>
+
+            <h4>
+              {{ product.price }}
+            </h4>
+
+            <div class="product-buttons">
+
+              <button class="btn btn-dark">
+                <i class="bi bi-cart-plus"></i>
+                Order Now
+              </button>
+
+              <button class="btn btn-outline-dark">
+                Show Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COMING SOON -->
+
+<section
+  class="coming-section"
+  id="comingSoon">
+
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-6">
+
+        <span class="badge bg-dark mb-3">
+          Coming Soon
+        </span>
+
+        <h2>
+          Something Amazing
+          Is Coming
+        </h2>
+
+        <p>
+          Get ready for our upcoming smartphone.
+          Experience technology like never before.
+        </p>
+
+        <button class="btn btn-dark">
+          Notify Me
+          <i class="bi bi-bell"></i>
+        </button>
+
+      </div>
+
+
+      <div class="col-lg-6 text-center">
+
+        <div class="coming-phone">
+
+          <img
+            src="https://images.unsplash.com/photo-1618478594486-c65b899c4936?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Coming Soon">
+
+          <div class="coming-text">
+            COMING SOON
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

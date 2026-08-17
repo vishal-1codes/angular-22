@@ -2,6 +2,7 @@ import { Component,effect,PLATFORM_ID,signal,inject } from '@angular/core';
 import { Common } from '../../core/services/common';
 import { About } from '../about/about';
 import { isPlatformBrowser } from '@angular/common';
+import { Product } from '../../core/services/product';
 @Component({
   selector: 'app-home',
   imports: [],
@@ -10,11 +11,12 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class Home {
   productList=signal<any[]>([])
+  smartPhoneList=signal<any[]>([])
   count=signal(1)
 
   private patformId=inject(PLATFORM_ID)
 
-  constructor(public common:Common){
+  constructor(public common:Common,private product:Product){
 
     effect(()=>{
       this.productList.set(this.common.productList())
@@ -27,6 +29,10 @@ export class Home {
 
     })
 
+
+    effect(()=>{
+      this.smartPhoneList.set(this.product.products())
+    })
    
     
   }
@@ -38,4 +44,7 @@ export class Home {
     let newProduct={Index:this.count(),name:'One'}
     this.common.addProduct(newProduct)
   }
+
+
+   
 }
