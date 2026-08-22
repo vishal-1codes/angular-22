@@ -45,6 +45,17 @@ export class Home {
     this.common.addProduct(newProduct)
   }
 
+  buyOut(product:any){
+    this.product.products.update((ps:any[])=>
+      ps.map((p:any)=>      
+        p.name === product.name ? {...p,soldout:true,count:1} : p
+      )
+    )
+
+
+    console.log("this.product.products",this.product.products());
+    
+  }
 
    
 }

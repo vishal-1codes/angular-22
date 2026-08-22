@@ -116,9 +116,9 @@
 
             <div class="product-buttons">
 
-              <button class="btn btn-dark">
+              <button class="btn btn-dark" (click)="buyOut(product)">
                 <i class="bi bi-cart-plus"></i>
-                Order Now
+               {{ product.soldout ? 'View Cart' : 'Order Now' }}
               </button>
 
               <button class="btn btn-outline-dark">
