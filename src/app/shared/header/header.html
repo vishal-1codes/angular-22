@@ -66,7 +66,7 @@
           Contact Us
         </button>
 
-        <button class="icon-btn">
+        <button class="icon-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> 
           <i class="bi bi-cart3"></i>
           <span class="cart-count">2</span>
         </button>
@@ -82,3 +82,144 @@
   </div>
 
 </nav>
+
+
+<!-- Cart Offcanvas -->
+<div
+  class="offcanvas offcanvas-end cart-offcanvas"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <!-- Header -->
+  <div class="offcanvas-header cart-header">
+    <div>
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">
+        <i class="bi bi-bag-check me-2"></i>
+        My Cart
+      </h5>
+      <small class="cart-items-count">2 items</small>
+    </div>
+
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+
+  <!-- Cart Body -->
+  <div class="offcanvas-body cart-body">
+
+    <!-- Cart Item -->
+    <div class="cart-item">
+
+      <!-- Product Image -->
+      <div class="cart-product-image">
+        <img
+          src="assets/images/samsung-a36.png"
+          alt="Samsung Galaxy A36"
+        />
+      </div>
+
+      <!-- Product Details -->
+      <div class="cart-product-details">
+
+        <h6>Samsung Galaxy A36 5G</h6>
+
+        <p class="cart-product-info">
+          8GB RAM • 128GB
+        </p>
+
+        <div class="cart-price">
+          ₹29,999
+        </div>
+
+        <!-- Quantity -->
+        <div class="cart-bottom">
+
+          <div class="quantity-control">
+            <button type="button">−</button>
+            <span>1</span>
+            <button type="button">+</button>
+          </div>
+
+          <button class="remove-btn">
+            <i class="bi bi-trash3"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Second Cart Item -->
+    <div class="cart-item">
+
+      <div class="cart-product-image">
+        <img
+          src="assets/images/samsung-f36.png"
+          alt="Samsung Galaxy F36"
+        />
+      </div>
+
+      <div class="cart-product-details">
+
+        <h6>Samsung Galaxy F36 5G</h6>
+
+        <p class="cart-product-info">
+          8GB RAM • 128GB
+        </p>
+
+        <div class="cart-price">
+          ₹19,999
+        </div>
+
+        <div class="cart-bottom">
+
+          <div class="quantity-control">
+            <button type="button">−</button>
+            <span>1</span>
+            <button type="button">+</button>
+          </div>
+
+          <button class="remove-btn">
+            <i class="bi bi-trash3"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Cart Footer -->
+  <div class="cart-footer">
+
+    <div class="price-row">
+      <span>Subtotal</span>
+      <strong>₹49,998</strong>
+    </div>
+
+    <div class="price-row delivery">
+      <span>Delivery</span>
+      <span class="free">FREE</span>
+    </div>
+
+    <div class="total-row">
+      <span>Total</span>
+      <strong>₹49,998</strong>
+    </div>
+
+    <button class="checkout-btn">
+      Proceed to Checkout
+      <i class="bi bi-arrow-right ms-2"></i>
+    </button>
+
+  </div>
+
+</div>

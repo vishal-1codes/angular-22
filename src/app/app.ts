@@ -5,6 +5,7 @@ import { Footer } from './shared/footer/footer';
 import {input } from '@angular/core';
 import { About } from './pages/about/about';
 import { Shipper } from './shared/shipper/shipper';
+import { Cart } from './shared/cart/cart';
 @Component({
   selector: 'app-root',
   imports: [
@@ -12,7 +13,8 @@ import { Shipper } from './shared/shipper/shipper';
     Footer,
     RouterOutlet,
     About,
-    Shipper
+    Shipper,
+    Cart
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
